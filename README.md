@@ -37,15 +37,19 @@ The following screen shots show results of running the reports on both 2107 and 
 (TODO: Add information on the changes that were needed to eliminate the extra for loop. i.e. 1: new arrays to hold the data being sumarized with a png of the arrays and 2: describe about how the index var was used to traverse the arrays.)
 
 #### New Arrays
-In order to use one loop, we need to store the values we retrieve by ticker.  To do this an index and 3 arrays were defined before starting the loop as shown in figure 1 below:
-
-<img src="./Resources/Declarations.png" alt="declarations" width="500"/>
-
-This image shows the for loop before refactoring. In this code we can see that having nested for loops will run the code in the inner loop i * j times, or a factor of N^2:
+Figure 1 shows the for loop before refactoring. In this code we can see that having nested for loops will run the code in the inner loop i * j times, or a factor of N^2:
 
 <img src="./Resources/Original_ForLoop.png" alt="original loop" width="600"/>
 
-This image show shows the for loop after refactoring. In this code we can see that the total number of times we run through the array will be equal to the number of rows of data in the spreadsheet, or a factor of N:
+In order to use one loop, we need to store the values we retrieve by ticker.  This way we can loop through the smaller arrays several times without adding time to the performance. To do this, an index and 3 arrays were defined before starting the loop as shown in Figure 2 below:
+
+<img src="./Resources/Declarations.png" alt="declarations" width="500"/>
+
+Note the following differences between this code and the original code:
+- on line 9: there is a new variable tickerCount to indicate the total number of tickers
+- on lines 36-38: there are 3 new arrays: tickerVolumes, tickerStartingPrices and tickerEndingPrices that each use tickerCount to intialize the dimension based on the value in tickerCount. This allows us to add more tickers by changing the declaration of tickerCount on line 9. In a future enhancement, this variable and the tickers array could be set by reading the tickers from a file, for example, instead of having them hard-coded in this code.
+- all 4 arrays are declared using ReDim vs Dim. Since they now use variables instead of hard-coded numbers to declare their dimension they cannot be declared with Dim which requires a constant value as a parameter.
+- on lines 42-44: tickerVolumes needs to be used to sum all the volumes for each ticker, therefore, we need to initialize each one to 0 before starting our main For loop shown in Figure 3. In this code we can see that the total number of times we run through the array will be equal to the number of rows of data in the spreadsheet, or a factor of N:
 
 <img src="./Resources/Refactored_ForLoop.png" alt="refactored loop" width="600"/>
 
