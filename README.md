@@ -15,7 +15,7 @@ The following screen shots show results of running the reports on both 2107 and 
 
 ### 2017 Results Before Refactoring
 
-(TODO: screenshot of 2017 AllStocksAnalysis performance results)
+![2017_Results_After_Refactoring.png](./resources/2017_Results_After_Refactoring.png)
 
 ### 2017 Results After Refactoring
 
