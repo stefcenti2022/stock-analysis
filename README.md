@@ -11,7 +11,23 @@ The goal of this project is to take the original green_stocks analysis and refac
 ---
 ## Results
 
-(TODO: The analysis is well described with screenshots and code (4 pt).)
+The following screen shots show results of running the reports on both 2107 and 2018 data both before and after refactoring.
+
+### 2017 Results Before Refactoring
+
+(TODO: screenshot of 2017 AllStocksAnalysis performance results)
+
+### 2017 Results After Refactoring
+
+(TODO: screenshot of 2017 AllStocksAnalysisRefactored performance results)
+
+### 2018 Results Before Refactoring
+
+(TODO: screenshot of 2018 AllStocksAnalysis performance results)
+
+### 2018 Results After Refactoring
+
+(TODO: screenshot of 2018 AllStocksAnalysisRefactored performance results)
 
 ---
 ## Summary
