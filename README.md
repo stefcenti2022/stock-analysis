@@ -39,15 +39,15 @@ The following screen shots show results of running the reports on both 2107 and 
 #### New Arrays
 In order to use one loop, we need to store the values we retrieve by ticker.  To do this an index and 3 arrays were defined before starting the loop as shown in figure 1 below:
 
-![Declarations.png](./Resources/Declarations.png)
+<img src="./Resources/Declarations.png" alt="declarations" width="500"/>
 
 This image shows the for loop before refactoring. In this code we can see that having nested for loops will run the code in the inner loop i * j times, or a factor of N^2:
 
-![Original_ForLoop.png](./Resources/Original_ForLoop.png)
+<img src="./Resources/Original_ForLoop.png" alt="original loop" width="600"/>
 
 This image show shows the for loop after refactoring. In this code we can see that the total number of times we run through the array will be equal to the number of rows of data in the spreadsheet, or a factor of N:
 
-![Refactored_ForLoop.png](./Resources/Refactored_ForLoop.png)
+<img src="./Resources/Refactored_ForLoop.png" alt="refactored loop" width="600"/>
 
 ---
 ## Summary
