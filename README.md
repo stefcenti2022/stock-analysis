@@ -34,7 +34,11 @@ The following screen shots show results of running the reports on both 2107 and 
 
 After an analysis of the code it became apparent that the nested loop could be performed with just one iteration through the arrays. By doing this the number of iterations is cut from N^2 to N. (Note: I do not remember this formula exactly however an exponential number of steps is very costly compared to a linear number.
 
-(TODO: Detailed statement on the advantages and disadvantages of refactoring code in general (3 pt).)
+The numbers from the images above were placed in a new spreadsheet named "Summary" in the VBA_Challenge workbook to show the following:
+
+![AllStocksAnalysisRefactoredSummary.png](./Resources/AllStocksAnalysisRefactoredSummary.png)
+
+
 
 ---
 ## Challenges Encountered
