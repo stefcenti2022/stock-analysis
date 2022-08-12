@@ -34,6 +34,13 @@ The following screen shots show results of running the reports on both 2107 and 
 ![2018_Results_After_Refactoring.png](./Resources/2018_Results_After_Refactoring.png)
 
 ### Code Changes
+(TODO: Add information on the changes that were needed to eliminate the extra for loop. i.e. 1: new arrays to hold the data being sumarized with a png of the arrays and 2: describe about how the index var was used to traverse the arrays.)
+
+#### New Arrays
+In order to use one loop, we need to store the values we retrieve by ticker.  To do this an index and 3 arrays were defined before starting the loop as shown in figure 1 below:
+
+![Declarations.png](./Resources/Declarations.png)
+
 This image shows the for loop before refactoring. In this code we can see that having nested for loops will run the code in the inner loop i * j times, or a factor of N^2:
 
 ![Original_ForLoop.png](./Resources/Original_ForLoop.png)
@@ -41,8 +48,6 @@ This image shows the for loop before refactoring. In this code we can see that h
 This image show shows the for loop after refactoring. In this code we can see that the total number of times we run through the array will be equal to the number of rows of data in the spreadsheet, or a factor of N:
 
 ![Refactored_ForLoop.png](./Resources/Refactored_ForLoop.png)
-
-(TODO: Add information on the changes that were needed to eliminate the extra for loop. i.e. 1: new arrays to hold the data being sumarized with a png of the arrays and 2: describe about how the index var was used to traverse the arrays.)
 
 ---
 ## Summary
