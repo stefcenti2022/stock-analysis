@@ -42,6 +42,8 @@ This image show shows the for loop after refactoring. In this code we can see th
 
 ![Refactored_ForLoop.png](./Resources/Refactored_ForLoop.png)
 
+(TODO: Add information on the changes that were needed to eliminate the extra for loop. i.e. 1: new arrays to hold the data being sumarized with a png of the arrays and 2: describe about how the index var was used to traverse the arrays.)
+
 ---
 ## Summary
 
